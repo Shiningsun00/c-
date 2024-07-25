@@ -1,0 +1,25 @@
+1. c++ class vs struct 차이
+class는 기본 설정이 private 하지만 struct은 public 하다.
+struct은 프로젝트 전체에서 설정하는 변수를 쓸때 사용 class는 변하지 않는 변수들 사용 
+
+2. struct에서 c++과 c의 차이
+c++은 struct에서도 함수와 private: , public: 을 사용할 수 있지만 c에서는 사용할수 없다.
+
+3. class 생성자는
+class A{
+public:
+    class(int x, int y);  // 이게 생성자
+
+private:
+    int x;
+    int y;
+}
+
+4.overloading이 무엇인가
+overloafing은 같은 함수 이름을 포인터와 레퍼런스등을 사용하여 이용하는 것이다.  
+
+5. main.cpp, class.cpp, class.hpp 분류하기
+main.cpp에는 매인 함수만 있고 class.hpp 헤더 파일에는 declation을 진행하고 class.cpp에서 definition을 진행한다. 
+
+6. namespace가 필요한 이유 
+헤더 파일이 여러개이고 그안 함수 이름이 겹칠때 어느 헤더에서 불러올지를 결정하기위해 네임 스페이스를 정한다.
