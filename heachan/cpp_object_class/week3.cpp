@@ -29,15 +29,19 @@ void prac2(void) {
     myPrint("정수도");
 }
 
-int sum(int a = 0, int b = 0, int c = 0, int d = 0) {
+int sumVer1(const int a = 0, const int b = 0, const int c = 0, const int d = 0) {
     return a+b+c+d;
+}
+int sumVer2(const int* a = nullptr) {
+    static int default_array[4] = {0, 0, 0, 0};
+    return a[0] +a[1] + a[2] +a[3];
 }
 
 void prac3(void){ 
     std::cout << "#####prac3 execute#####" << std::endl;
-    std::cout << "sum(10, 15)         = "         << sum(10, 15) << std::endl;     
-    std::cout << "sum(10, 15, 25)     = "     << sum(10, 15, 25) << std::endl;     
-    std::cout << "sum(10, 15, 25, 30) = " << sum(10, 15, 25, 30) << std::endl;     
+    std::cout << "sumVer1(10, 15)         = " << sumVer1(10, 15)        << std::endl;     
+    std::cout << "sumVer1(10, 15, 25)     = " << sumVer1(10, 15, 25)    << std::endl;     
+    std::cout << "sumVer1(10, 15, 25, 30) = " << sumVer1(10, 15, 25, 30) << std::endl;     
 }
 
 
