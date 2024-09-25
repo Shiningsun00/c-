@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 
 int lab(int n) {
     return n*n;
@@ -45,7 +46,13 @@ void prac3(void){
 }
 
 
+void prac4(void){ 
+    std::cout << "#####prac4 execute#####" << std::endl;
+    std::string sentance = "When in Rome, do as the Romans.";
+    std::cout<< sentance.find("Rome") <<std::endl;   //"" 말고 ''쓰면 오류남  ''는 단일 문자용 타입이므로 각가의 문자를 생각해 인덱스 2에 있는 e 를 인식함
+}
+
 int main() { 
-    prac3();
+    prac4();
     return 0;
 }
