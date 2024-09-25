@@ -21,16 +21,27 @@ void myPrint(const double a) {
 void myPrint(std::string a) {
     std::cout << "문자 출력 : " << a <<std::endl;
 }
-
-void prac2(void) {
+// overloading
+void prac2(void) {  
     std::cout << "#####prac2 execute#####" << std::endl;
     myPrint(10);
     myPrint(10.05);
     myPrint("정수도");
 }
 
+int sum(int a = 0, int b = 0, int c = 0, int d = 0) {
+    return a+b+c+d;
+}
+
+void prac3(void){ 
+    std::cout << "#####prac3 execute#####" << std::endl;
+    std::cout << "sum(10, 15)         = "         << sum(10, 15) << std::endl;     
+    std::cout << "sum(10, 15, 25)     = "     << sum(10, 15, 25) << std::endl;     
+    std::cout << "sum(10, 15, 25, 30) = " << sum(10, 15, 25, 30) << std::endl;     
+}
+
 
 int main() { 
-    prac2();
+    prac3();
     return 0;
 }
