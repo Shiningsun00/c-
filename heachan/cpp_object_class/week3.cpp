@@ -33,16 +33,41 @@ void prac2(void) {
 int sumVer1(const int a = 0, const int b = 0, const int c = 0, const int d = 0) {
     return a+b+c+d;
 }
-int sumVer2(const int* a = nullptr) {
-    static int default_array[4] = {0, 0, 0, 0};
-    return a[0] +a[1] + a[2] +a[3];
+
+int* makeDefaultFunc(int i) { 
+    int beta_array[i];
+    for(int n= 0; n<i; i++) {
+        beta_array[n] = 0; 
+    }
+    static const int& default_array = beta_array;
+    return ;
+}
+int sumVer2(const int* a = nullptr, int i) {
+    
+    const int* using_array = ( a == nullptr ) ? default_array : a;
+    return using_array[0] +using_array[1] + using_array[2] +using_array[3];
 }
 
-void prac3(void){ 
+void prac3_1(void) { 
     std::cout << "#####prac3 execute#####" << std::endl;
-    std::cout << "sumVer1(10, 15)         = " << sumVer1(10, 15)        << std::endl;     
-    std::cout << "sumVer1(10, 15, 25)     = " << sumVer1(10, 15, 25)    << std::endl;     
+    std::cout << "sumVer1(10, 15)         = " << sumVer1(10, 15)         << std::endl;     
+    std::cout << "sumVer1(10, 15, 25)     = " << sumVer1(10, 15, 25)     << std::endl;     
     std::cout << "sumVer1(10, 15, 25, 30) = " << sumVer1(10, 15, 25, 30) << std::endl;     
+    std::cout << "sumVer2(10, 15)         = " << sumVer1(10, 15)         << std::endl;     
+    std::cout << "sumVer2(10, 15, 25)     = " << sumVer1(10, 15, 25)     << std::endl;     
+    std::cout << "sumVer2(10, 15, 25, 30) = " << sumVer1(10, 15, 25, 30) << std::endl;     
+}
+void prac3_2(void) { 
+    int i;
+    std::cout << "더할 정수의 개수를 입력 : " << std::endl;
+    std::cin >> i;
+    int array[i];
+    for(int n=0; n<i; n++) {
+        std::cout << "더할 정수를 입력하시오 : ";
+        std::cin >> array[n];
+
+    }
+
 }
 
 
@@ -53,6 +78,6 @@ void prac4(void){
 }
 
 int main() { 
-    prac4();
+    prac3();
     return 0;
 }
