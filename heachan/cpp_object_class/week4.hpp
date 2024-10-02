@@ -13,4 +13,16 @@ class Car {
 };
 
 
+class Date {
+    public:
+        Date(); 
+        void printYear();
+        int getYear();
+        void setYear(int year);
+
+    private:
+        int year;
+     
+};
+
 #endif
