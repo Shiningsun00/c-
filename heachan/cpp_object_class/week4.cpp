@@ -2,6 +2,20 @@
 
 
 //Car class 를 위한 defination
+Car::Car() {
+        speed = 0;
+        gear = 1;
+        color = "white";
+        std::cout << "디폴트 생성자: " << speed << " " << gear << " " << color << std::endl;
+        
+    }
+Car::Car(int s, int g, std::string c) { 
+    speed = s;
+    gear = g;
+    color = c;
+    std::cout << "생성자: " << speed << " " << gear << " " << color << std::endl;
+}
+
 int Car::getSpeed() { 
     return speed;
 }
@@ -25,5 +39,5 @@ void Date::setYear(int y) {
 }
 
 void Date::printYear() {
-    std::cout << getYear() << std::endl;
+    std::cout << Date::getYear() << std::endl;
 }

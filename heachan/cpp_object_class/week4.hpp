@@ -3,13 +3,17 @@
 # include <iostream>
 # include <string>
 class Car {
+    private:
+        int speed;
+        int gear;
+        std::string color;
+
     public:
+        Car();
+        Car(int s, int g,  std::string c);
         int getSpeed();
         void setSpeed(int s);
         void honk();
-
-    private:
-        int speed;
 };
 
 

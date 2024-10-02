@@ -34,8 +34,15 @@ void dynamicPrac() {
     std::cout << std:: endl;
 }
 
+void constructor() {
+    Car c1;
+    Car c2(100, 5, "red");
+
+}
 int main() {
-    pointPrac();
+    //datePrac();
+    //pointPrac();
     //dynamicPrac();
+    constructor();
     return 0;
 }
