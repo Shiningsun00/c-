@@ -2,9 +2,13 @@
 using namespace std;
 class Rectangle {
 private:
-
+    int Width;
+    int Height;
+    int Area;
 public:
-//
+    void setHeight (const int h) {Height = h;}
+    void setWidth(const int w) {Width = w;}
+     void greet mm
 };
 
 int main() {
