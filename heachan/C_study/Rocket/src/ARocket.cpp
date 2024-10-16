@@ -14,7 +14,7 @@ ARocket::ARocket(void) {
     this->fuel_amount = 0;
     this->ignition_temp = 0;
     this->fuel_type = "None";
-}
+}                                               // 디폴트 생성자 
 
 ARocket::ARocket(int y, float theta, int fuel_amount, float ignition_temp) {
 	std::cout << "[ARocket] " << MSG_CREATE << MSG_CALL << MSG_ENDL;
@@ -27,7 +27,7 @@ ARocket::ARocket(int y, float theta, int fuel_amount, float ignition_temp) {
 ARocket::ARocket(const ARocket& obj){
 	std::cout << MSG_COPY << MSG_CALL << MSG_ENDL;
     *this = obj;
-}                                           // 복사생성자
+}                                           // 복사생성자 ->한객체의 내용(멤버)를 다른 객체로 복사 생성(반드시 레퍼런스 사용)
 
 ARocket& ARocket::operator=(const ARocket& obj){
     if (this == &obj) //
