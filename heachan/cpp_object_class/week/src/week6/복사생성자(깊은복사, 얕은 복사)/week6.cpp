@@ -32,10 +32,10 @@ public:
     }
 };
 
-void displayStudent(Student obj){ //전역 함수의 형식매개변수가 객체. (복사 생성자 호출)
-    cout << "이름: " << obj.getName() << endl;
-    cout << "학번: " << obj.getNumber() << endl;
-}
+// void displayStudent(Student obj){ //전역 함수의 형식매개변수가 객체. (복사 생성자 호출)
+//     cout << "이름: " << obj.getName() << endl;
+//     cout << "학번: " << obj.getNumber() << endl;
+// }
 
 
 int main(){
