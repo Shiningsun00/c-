@@ -26,6 +26,23 @@ void prac1(void) {
     pCar = new Car(0, 1, "blue")           // 동적 메모리 할당으로 새로운 객체 생성
     pCar-> display();
 }
+void swapObjects(Car c1, Car c2) { 
+    Car tmp;
+    tmp = c1;
+    c1 = c2;
+    c2 = tmp;
+    c1.display();
+    c2.display()
+}
+
+void prac2(){ 
+    Car mine(0, 1, "white");
+    Car yours(0, 1, "red");
+    swapObjects(mine, yours);
+    // 바뀌었을까? 안바뀌었을까? --> 안바뀜
+    mine.display();
+    yours.display();
+}
 
 int main { 
     prac1();
