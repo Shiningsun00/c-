@@ -32,13 +32,30 @@ void swapObjects(Car c1, Car c2) {
     c1 = c2;
     c2 = tmp;
     c1.display();
-    c2.display()
+    c2.display();
 }
 
 void prac2(){ 
     Car mine(0, 1, "white");
     Car yours(0, 1, "red");
     swapObjects(mine, yours);
+    // 바뀌었을까? 안바뀌었을까? --> 안바뀜
+    mine.display();
+    yours.display();
+}
+
+void swapObjects(Car c1, Car c2) { 
+    Car tmp;
+    tmp = *p1;
+    *p1 = *p2;
+    *p2 = tmp;
+    p1->display();
+    p2->display();
+}
+void prac2(){ 
+    Car mine(0, 1, "white");
+    Car yours(0, 1, "red");
+    swapObjects(&mine, &yours);
     // 바뀌었을까? 안바뀌었을까? --> 안바뀜
     mine.display();
     yours.display();
