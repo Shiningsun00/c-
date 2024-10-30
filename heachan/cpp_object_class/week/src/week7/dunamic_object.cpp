@@ -19,12 +19,11 @@ void Car::display(void) {
 
 void prac1(void) { 
     cout << "#########Prac1#########"
-    Car myCar;
+    Car myCar;                             // 정적 메모리 할당으로 객체 생성
     myCar.display();
-    Car* pCar = &myCar;
+    Car* pCar = &myCar;                    // 객체 포인터로 동일한 객체를 가리키게 함
     pCar->display();
-    pCar->display();
-    pCar = new Car(0, 1, "blue")
+    pCar = new Car(0, 1, "blue")           // 동적 메모리 할당으로 새로운 객체 생성
     pCar-> display();
 }
 
