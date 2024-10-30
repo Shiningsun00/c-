@@ -34,7 +34,7 @@ void swapObjects(Car c1, Car c2) {
     c1.display();
     c2.display();
 }
-
+///////////////////////////////////////
 void prac2(){ 
     cout << "#########Prac3#########" << endl;
     Car mine(0, 1, "white");
@@ -54,6 +54,7 @@ void swapObjectsPrt(Car c1, Car c2) {
     p1->display();
     p2->display();
 }
+////////////////////////////////////
 void prac3(){ 
     cout << "#########Prac3#########" << endl;
     Car mine(0, 1, "white");
@@ -63,7 +64,7 @@ void prac3(){
     mine.display();
     yours.display();
 }
-
+////////////////////////////////////////
 void swapObjects(Car &c1, Car &c2) { 
     cout << "함수를 참조자로 받을 때" << endl;
     Car tmp;
@@ -73,7 +74,7 @@ void swapObjects(Car &c1, Car &c2) {
     c1.display();
     c2.display();
 }
-
+////////////////////////////////
 void prac3(){ 
     cout << "#########Prac3#########" << endl;
     Car mine(0, 1, "white");
@@ -86,5 +87,7 @@ void prac3(){
 
 int main { 
     prac1();
+    prac2();
+    prac3();
     return 0;
 }
