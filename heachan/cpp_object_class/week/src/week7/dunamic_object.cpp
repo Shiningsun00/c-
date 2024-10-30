@@ -18,7 +18,7 @@ void Car::display(void) {
 }
 
 void prac1(void) { 
-    cout << "#########Prac1#########"
+    cout << "#########Prac1#########" << endl;
     Car myCar;                             // 정적 메모리 할당으로 객체 생성
     myCar.display();
     Car* pCar = &myCar;                    // 객체 포인터로 동일한 객체를 가리키게 함
@@ -36,6 +36,7 @@ void swapObjects(Car c1, Car c2) {
 }
 
 void prac2(){ 
+    cout << "#########Prac3#########" << endl;
     Car mine(0, 1, "white");
     Car yours(0, 1, "red");
     swapObjects(mine, yours);
@@ -44,7 +45,8 @@ void prac2(){
     yours.display();
 }
 
-void swapObjects(Car c1, Car c2) { 
+void swapObjectsPrt(Car c1, Car c2) { 
+    cout << "함수를 포인터로 만들 때" << endl;
     Car tmp;
     tmp = *p1;
     *p1 = *p2;
@@ -52,11 +54,32 @@ void swapObjects(Car c1, Car c2) {
     p1->display();
     p2->display();
 }
-void prac2(){ 
+void prac3(){ 
+    cout << "#########Prac3#########" << endl;
     Car mine(0, 1, "white");
     Car yours(0, 1, "red");
     swapObjects(&mine, &yours);
-    // 바뀌었을까? 안바뀌었을까? --> 안바뀜
+    // 바뀌었을까? 안바뀌었을까? --> 볌함
+    mine.display();
+    yours.display();
+}
+
+void swapObjects(Car &c1, Car &c2) { 
+    cout << "함수를 참조자로 받을 때" << endl;
+    Car tmp;
+    tmp = c1;
+    c1 = c2;
+    c2 = tmp;
+    c1.display();
+    c2.display();
+}
+
+void prac3(){ 
+    cout << "#########Prac3#########" << endl;
+    Car mine(0, 1, "white");
+    Car yours(0, 1, "red");
+    swapObjects(mine, yours);
+    // 바뀌었을까? 안바뀌었을까? --> 볌함
     mine.display();
     yours.display();
 }
